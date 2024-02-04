@@ -1,0 +1,132 @@
+/*
+Theme Name: Photos
+Theme URI: https://photos.nscc.ca
+Author: Jacob Dixon
+Description: This is a fresh theme for the photos page for CMS course.
+version:1.0
+*/
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@import "./node_modules/bootstrap/scss/variables";
+
+/* Pin Box for front page */
+.pin-container {
+    width: 100%;
+    margin: 20px auto;
+    columns: 3;
+    column-gap: 20px
+}
+
+.pin-box {
+    width: 100%;
+    margin-bottom: 20px;
+    break-inside: avoid;
+    position:relative;
+    overflow-y: hidden;
+ }
+
+ .pin-box img {
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.pin-box a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:1;
+}
+
+.pin-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display:flex;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) );
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.pin-box:hover .pin-caption {
+    transform: translateY(0);
+}
+
+.pin-caption img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post_profile_img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+    .pin-container {
+        columns: 2;
+    }
+}
+
+@media (max-width: 562px) {
+    .pin-container {
+        columns: 1;
+    }
+}
+
+.post_profile_img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.grow {
+
+    transition: transform .2s; /* Animation */
+    width: 100px;
+    height: 75px;
+}
+
+.grow a{
+    text-decoration: none;
+}
+  
+.grow:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+nav{
+    background-color: $purple-400;
+}
+
+body{
+    background: $gray-200 !important;
+
+}
+
+.card{
+    transition: transform .2s; /* Animation */
+}
+
+.card:hover{
+    box-shadow: 5px 5px $gray-600;
+    transform: scale(1.01) 0.5s;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.contentContainer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
