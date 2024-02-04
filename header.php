@@ -20,7 +20,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <?php
+        <?php 
             $menu_items = get_categories();
 
             foreach($menu_items as $menu_item)
