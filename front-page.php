@@ -52,8 +52,8 @@ $categories = get_categories();
                                         </div>
                                         <div class="col-sm-7">
                                             <div class="card-body">
-                                                <h5 class="card-title"><?=the_title();?></h5>
-                                                <p class="card-text"><?=the_excerpt();?></p>
+                                                <h3 class="card-title"><?=the_title();?></h3>
+                                                <h5 class="card-text"><?=the_excerpt();?></h5>
                                                 <a href="<?=the_permalink();?>" class="stretched-link"></a>
                                             </div>
                                         </div>
