@@ -38,6 +38,7 @@ if ( ! function_exists( 'photos_setup' ) ) :
 		 * Enable support for post thumbnails and featured images.
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'square', 480, 480, true);
 
 		/**
 		 * Add support for two custom navigation menus.
@@ -59,13 +60,45 @@ add_action( 'after_setup_theme', 'photos_setup' );
 //add Bootstrap style and js
 function photos_enqueue_styles(){
 	wp_enqueue_style('photos_theme_styles', get_stylesheet_uri());
-
 	//bootstrap css and js
 	wp_enqueue_style('bootstrap_styles', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css');
 	wp_enqueue_script('boostrapscript',"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js");
+	wp_enqueue_script('jquery');
+
+	// Conditional custom style and script for a specific page
+    if (is_page('experience')) { // Replace 'example-page' with your target page's slug, ID, or title
+        // Enqueue custom style for 'example-page'
+        wp_enqueue_style('custom-style-example-page', get_stylesheet_directory_uri() . '/experience-style.css');
+
+        // Enqueue custom script for 'example-page'
+		wp_enqueue_script('fontawesome', get_stylesheet_directory_uri() . '/assets/fontawesome/js/all.min.js', array(), null, true);
+    }
+	if (is_page('contact')) { // Replace 'example-page' with your target page's slug, ID, or title
+        // Enqueue custom style for 'example-page'
+        wp_enqueue_style('custom-style-example-page', get_stylesheet_directory_uri() . '/contact-style.css');
+
+        // Enqueue custom script for 'example-page'
+		wp_enqueue_script('fontawesome', get_stylesheet_directory_uri() . '/assets/fontawesome/js/all.min.js', array(), null, true);
+    }
+	if (is_page('chat')) { // Replace 'example-page' with your target page's slug, ID, or title
+        // Enqueue custom style for 'example-page'
+        wp_enqueue_style('custom-style-example-page', get_stylesheet_directory_uri() . '/chat-style.css');
+
+        // Enqueue custom script for 'example-page'
+		wp_enqueue_script('script', get_stylesheet_directory_uri() . '/script.js', array(), null, true);
+		wp_enqueue_script('request', get_stylesheet_directory_uri() . '/request.php', array(), null, true);
+    }
 }
 add_action( 'wp_enqueue_scripts', 'photos_enqueue_styles');
 
+function add_defer_attribute($tag, $handle) {
+    if ('fontawesome' === $handle) {
+        return str_replace(' src', ' defer src', $tag);
+    }
+    return $tag;
+}
+
+add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
 //wp_enqueue_style('', '"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"');
 //wp_enqueue_script('boostrapscript',"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js");
 

@@ -12,12 +12,45 @@ get_header();
 $categories = get_categories();
 //function for dumping raw content of a variable
 //var_dump($categories);
+
+/*
+*******************************************************************************************************
+Pin status bar to top of page when scrolling
+intruduce a slightly transparent nav bar
+improve color selections - jules says purple is too purple
+
+improve opening dialog, like "im a front end developer"
+
+bootstrap card are too boostrappy, maybe add some transparency and a bit of contrast
+
+make resume less wordy
+
+improve form css
+
+add a photos section - photography
+*******************************************************************************************************
+
+*/
 ?>
 
+
+
+
+
 <?php
-//loop through the photos and display. 
+//loop through the photos and display. 127
+$background_img = wp_get_attachment_image_url(239, "full");
 ?>
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="width: 100%; height: 100vh; background: url(<?=$background_img?>) top center; background-size: cover;">
+    <div class="hero-container">
+        <h1>Jacob Dixon</h1>
+        <p>Explore my portfolio by scrolling down to view my latest projects.</p>
+    </div>
+</section><!--End Hero -->
+<div class="container mt-3 mb-5">
 <div class="grid-container">
+
+
     <?php
     foreach($categories as $category){
         $id = $category->term_id;
@@ -53,7 +86,7 @@ $categories = get_categories();
                                         <div class="col-sm-7">
                                             <div class="card-body">
                                                 <h3 class="card-title"><?=the_title();?></h3>
-                                                <h5 class="card-text"><?=the_excerpt();?></h5>
+                                                <p class="card-text"><?=the_excerpt();?></p>
                                                 <a href="<?=the_permalink();?>" class="stretched-link"></a>
                                             </div>
                                         </div>
@@ -73,7 +106,6 @@ $categories = get_categories();
     ?>
     
 </div>
-
 
 <?php
 //display the footer

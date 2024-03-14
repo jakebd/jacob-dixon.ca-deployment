@@ -12,6 +12,7 @@ while ( have_posts() ) :
 
 
 <!--  -->
+<div class="container mt-3 mb-5">
     <div class="contentContainer">
 <!-- Page content-->
         <div class="container mt-5">
