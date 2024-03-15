@@ -86,7 +86,7 @@ function photos_enqueue_styles(){
 
         // Enqueue custom script for 'example-page'
 		wp_enqueue_script('script', get_stylesheet_directory_uri() . '/script.js', array(), null, true);
-		wp_enqueue_script('request', get_stylesheet_directory_uri() . '/request.php', array(), null, true);
+		wp_enqueue_script('supabase', "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2", null, null, true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'photos_enqueue_styles');
@@ -95,10 +95,37 @@ function add_defer_attribute($tag, $handle) {
     if ('fontawesome' === $handle) {
         return str_replace(' src', ' defer src', $tag);
     }
+	// if ('supabase' === $handle) {
+    //     return str_replace(' src', ' defer src', $tag);
+    // }
+	// if ('script' === $handle) {
+    //     return str_replace(' src', ' defer src', $tag);
+    // }
+    return $tag;
+}
+
+function add_type_attribute($tag, $handle, $src) {
+    // if not your script, do nothing and return original $tag
+    if ( 'supabase' !== $handle ) {
+        return $tag;
+    }
+    // change the script tag by adding type="module" and return it.
+    $tag = '<script src="' . esc_url( $src ) . '"></script>';
+    return $tag;
+}
+function add_type_attribute_to_script($tag, $handle, $src) {
+    // if not your script, do nothing and return original $tag
+    if ( 'script' !== $handle ) {
+        return $tag;
+    }
+    // change the script tag by adding type="module" and return it.
+    $tag = '<script type="module" src="' . esc_url( $src ) . '"></script>';
     return $tag;
 }
 
 add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
+add_filter('script_loader_tag', 'add_type_attribute' , 10, 3);
+add_filter('script_loader_tag', 'add_type_attribute_to_script' , 10, 3);
 //wp_enqueue_style('', '"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"');
 //wp_enqueue_script('boostrapscript',"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js");
 

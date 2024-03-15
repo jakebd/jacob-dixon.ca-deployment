@@ -1,65 +1,67 @@
-const input = document.querySelector('.chatinput')
-const send = document.querySelector('.sendbutton')
-const chatContainer = document.querySelector('.chats')
+//initialize supabase client
+const SupaURL = "https://trgudyxbbcssozaokpef.supabase.co"
+const SupaKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRyZ3VkeXhiYmNzc296YW9rcGVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAyNjk2NTQsImV4cCI6MjAyNTg0NTY1NH0.xdcZ62kIXdBePM7v9She65EKxwfLvKXKsR6rRFj65Q4"
 
-send.onclick = () => {
-    if(input.value){
-        const message = `
-            <div class="message">
-                <div>
-                    ${input.value}
-                </div>
-            </div>
-        `
-        chatContainer.innerHTML += message
-        scrollDown();
-        bot()
-        input.value = null
-    }
-}
+const supabaseClient = supabase.createClient(SupaURL, SupaKey)
 
-// when click enter
-input.addEventListener("keypress", function(e){
-    if(e.key === "Enter"){
-        e.preventDefault();
-        send.click();
-    }
-})
+//select DOM elements
+const messageBar = document.querySelector("#messageInput");
+const sendBtn = document.querySelector(".sendBtn");
+const messageBox = document.querySelector(".chats");
 
-// scroll down when new message added
+// let API_URL = "https://api.openai.com/v1/chat/completions";
+// let API_KEY = "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"
+
 function scrollDown(){
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+     messageBox.scrollTop = messageBox.scrollHeight;
 }
 
-// bot response
-function bot(){
-    var http = new XMLHttpRequest()
-    var data = new FormData()
-    data.append('prompt', input.value)
-    http.open('POST', 'request.php', true)
-    http.send(data)
-    setTimeout(() => {
-        chatContainer.innerHTML += `
-            <div class="message response">
-                <div>
-                    <img src="img/preloader.gif" alt="preloader">
-                </div>
-            </div>
-        `
-        scrollDown();
-    }, 1000);
-    http.onload = () => {
-        var response = JSON.parse(http.response)
-        var replyText = processResponse(response.choices[0].text)
-        var replyContainer = document.querySelectorAll('.response')
-        replyContainer[replyContainer.length-1].querySelector('div').innerHTML = replyText
-        scrollDown();
-    }
-}
+async function chat() {
+  if(messageBar.value.length > 0){
+    const UserTypedMessage = messageBar.value;
+    messageBar.value = "";
 
-function processResponse(res){
-    var arr = res.split(':')
-    return arr[arr.length-1]
-        .replace(/(\r\n|\r|\n)/gm, '')
-        .trim()
+    let message =
+    `<div class="message">
+        <div>
+        ${UserTypedMessage}
+        </div>
+    </div>`;
+
+  let response = 
+    `<div class="message response" >
+        <div class="new">
+            <img src="${preloaderImageUrl}" style="width: 40px; height: 40px; " alt="preloader">
+        </div>
+    </div>`
+    messageBox.insertAdjacentHTML("beforeend", message);
+    scrollDown();
+
+
+    setTimeout(async () =>{
+      messageBox.insertAdjacentHTML("beforeend", response);
+      scrollDown();
+      try{
+        const {data, error} = await supabaseClient.functions.invoke('ask-custom-data', {
+          body: JSON.stringify({query: UserTypedMessage})
+        });
+        console.log(data);
+        const ChatBotResponse = document.querySelector(".response .new");
+        ChatBotResponse.innerHTML = data.text
+        ChatBotResponse.classList.remove("new");
+        scrollDown();
+      }catch(error){
+        ChatBotResponse.innerHTML = "Opps! An error occured. Please try again"
+        scrollDown();
+      }
+    }, 100);
+  }
 }
+sendBtn.onclick = chat;
+
+document.getElementById('messageInput').addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+      event.preventDefault(); // Prevents the default form submission if your input is in a form
+      chat();
+  }
+});
