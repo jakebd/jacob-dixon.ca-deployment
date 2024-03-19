@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<div class="container mt-3 mb-5">
+<div class="experience-container mt-3 mb-5">
     <article class="resume-wrapper text-center position-relative">
 	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
 		    <header class="resume-header pt-4 pt-md-0">
@@ -22,7 +22,7 @@ get_header();
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
 							    <ul class="resume-social list-unstyled">
-					                <li class="mb-3"><a class="text-link" href="https://linkedin.com/in/jacob-dixon-53194b171" target="_blank"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/in/jacob-dixon</a></li>
+					                <li class="mb-3"><a class="text-link" href="https://linkedin.com/in/jacob-dixon-53194b171" target="_blank"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/jacob-dixon</a></li>
 					                <li class="mb-3"><a class="text-link" href="https://github.com/jakebd" target="_blank"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/jakebd</a></li>
 					                <li class="mb-3"><a class="text-link" href="https://www.instagram.com/jake_d07/" target="_blank"><span class="fa-container text-center me-2"><i class="fab fa-instagram fa-fw"></i></span>instagram.com/jake_d07</a></li>
 							    </ul>
@@ -59,12 +59,12 @@ get_header();
 										        <h3 class="resume-position-title font-weight-bold mb-1">Store Manager</h3>
 										        <div class="resume-company-name ms-auto">American Eagle Outfitters</div>
 										    </div><!--//row-->
-										    <div class="resume-position-time">Aug 2017 - Sep 2023</div>
+										    <div class="resume-position-time">Aug 2017 - Sep 2022</div>
 									    </div><!--//resume-timeline-item-header-->
 									    <div class="resume-timeline-item-desc">
 										    <p>
 
-                          In my role as a Store Manager at American Eagle Outfitters(2020 - 2023), tasked with leading a top-200 store, I leveraged my leadership and team management skills to drive significant sales and profit growth. 
+                          In my role as a Store Manager at American Eagle Outfitters(2020 - 2022), tasked with leading a top-200 store, I leveraged my leadership and team management skills to drive significant sales and profit growth. 
                           My approach focused on developing a team-oriented environment, where coaching and personal development were prioritized, leading to enhanced performance and customer satisfaction. 
                           I was responsible for managing store operations, inventory, visual merchandising, and ensuring adherence to company policies. 
                           My efforts were aimed at creating a high-achieving store culture that consistently met and exceeded company goals.
@@ -91,7 +91,7 @@ get_header();
 										        <h3 class="resume-position-title font-weight-bold mb-1">Customer Experience Associate</h3>
 										        <div class="resume-company-name ms-auto">TD Canada Trust</div>
 										    </div><!--//row-->
-										    <div class="resume-position-time">Sept 2023 - Present</div>
+										    <div class="resume-position-time">Sept 2022 - Present</div>
 									    </div><!--//resume-timeline-item-header-->
 									    <div class="resume-timeline-item-desc">
 										    <p>
@@ -191,11 +191,11 @@ get_header();
 							            <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
 							            <li class="list-inline-item"><span class="badge badge-light">Wireframing</span></li>
 							            <li class="list-inline-item"><span class="badge badge-light">Laravel</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">LinkedIn Learning</span></li>
+                          				<li class="list-inline-item"><span class="badge badge-light">LinkedIn Learning</span></li>
 							            <li class="list-inline-item"><span class="badge badge-light">MongoDB</span></li>
 							            <li class="list-inline-item"><span class="badge badge-light">Express</span></li>
 							            <li class="list-inline-item"><span class="badge badge-light">Next.JS</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">AI</span></li>
+                          				<li class="list-inline-item"><span class="badge badge-light">OpenAI</span></li>
 						            </ul>
 						        </div><!--//resume-skill-item-->
 						    </div><!--resume-section-content-->
@@ -207,7 +207,7 @@ get_header();
 								    <li class="mb-2">
 								        <div class="resume-degree font-weight-bold">Diploma - IT Web Programming</div>
 								        <div class="resume-degree-org">Nova Scotia Community College</div>
-								        <div class="resume-degree-time">Sep 2023 - Present</div>
+								        <div class="resume-degree-time">Sep 2022 - Present</div>
 								    </li>
 								    <li>
 								        <div class="resume-degree font-weight-bold">Bachelor of Computer Science - Incomplete</div>

@@ -18,259 +18,107 @@ $main-blue: #6f42c1 !default;
 //$main-blue: #0076bd !default;
 $main-blue-rgb-015: rgba(85, 0, 189, 0.1) !default;
 
-//$background-Color-Dark: #14111c;
 $background-Color-Dark: #14111c;
-$theme-color-secondary: lighten($background-Color-Dark, 6%);
-//Nav Styling
-
-nav {
-    display: block;
-    position: fixed; /* Fixed positioning */
-    top: 0; /* Position at the top */
-    left: 0;
-    width: 100%; /* Occupy full width */
-    z-index: 9999; /* Ensure it's above other content */
-    background: $theme-color-secondary;
-    font-family: Hack, monospace;
-    margin-top: 0; /* Remove margin-top */
-    
-    .nav-brand{
-        display: none;
-        font-size: 2rem;
-        color: #ffffff;
-        text-align: center;
-    }
-
-    .hamburger{
-        display: none;
-        cursor: pointer;
-    }
-
-    .bar{
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background-color: white;
-    }
-
-    .menuItems {
-        list-style: none;
-        display: inline-flex;
-
-        li {
-            margin-top: 1em;
-            padding-left: 15px;
-            padding-right: 15px;
-            position: relative; /* Needed for absolute positioning of the submenu */
-
-            ul.sub-menu {
-                display: none;
-                position: absolute;
-                background: $theme-color-secondary; /* Submenu background */
-                padding: 10px;
-                border-radius: 5px;
-                top: 100%; /* Position right below the menu item */
-                left: 0;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: for a subtle shadow */
-                z-index:99999 ;
-                list-style-type: none;
-
-            }
-
-            a {
-                text-decoration: none;
-                color: #ffffff;
-                font-size:20px;
-                font-weight: 400;
-                transition: all 0.5s ease-in-out;
-                position: relative;
-                text-transform: uppercase;
-
-                &::before {
-                    content: attr(data-item);
-                    transition: 0.5s;
-                    color: #fad07e;
-                    font-weight: 500;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    width: 0;
-                    overflow: hidden;
-                }
-                
-                &:hover {
-                    &::before {
-                        width: 100%;
-                        transition: all 0.5s ease-in-out;
-                    }
-                }
-            }
-            @media all and (min-width: 769px) {
-              &:hover > .sub-menu {
-                  display: block; /* Show submenu on hover */
-              }
-            }
-        }
-    }
-}
-
-.menu-item-has-children > a::after {
-    position: relative;
-    top: -5px;
-    content: "";
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    border-right: 0.2em solid #ffffff;
-    border-top: 0.2em solid #ffffff;
-    transform: rotate(135deg);
-    margin-left: 0.5em;
-}
-
-@media (max-width: 768px) {
-    nav .hamburger {
-        display: block;
-        margin: 1em;
-        z-index: 9999;
-    }
-
-    nav .phantom{
-      width: 4em;
-    }
-
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    nav{
-        display: flex;
-        justify-content: space-between;
-        z-index: 99999;
-        transition: none;
-        
-        .nav-brand{
-            display: inline-flex;
-            font-size: 2rem;
-            color: #bababa;
-            text-align: center;
-            z-index: 99999;
-            background-color: $theme-color-secondary;
-        }
-
-        
-
-        .menu-item-has-children > .sub-menu {
-          background-color: lighten($background-Color-Dark, 10%);
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          width: 100%;
-          top: 0;
-          left: 0;
-          transform: translateY(0);
-          z-index: 5;
-          max-height: 500px; /* Adjust to your preferred max-height */
-          opacity: 1;
-          transition: none;
-
-      }
-
-        .menu-item-has-children.active > .sub-menu {
-          background-color: lighten($background-Color-Dark, 10%);
-          display: flex;
-          flex-direction: column;
-          position: relative;
-          width: 100%;
-          top: 0;
-          left: 0;
-          transform: translateY(0);
-          z-index: 5;
-          max-height: 500px; /* Adjust to your preferred max-height */
-          opacity: 1;
-          transition: none;
-
-      }
-
-        /* Adjust z-index of submenu and menu items */
-        .menu-item-has-children.active > .sub-menu {
-          z-index: 6; /* Adjust z-index to be above other menu items */
-        }
-
-        /* Push other menu items down */
-        .menu-item-has-children.active > .sub-menu ~ .menuItems {
-            transform: translateY(100%);
-        }
-
-        .menuItems {
-            position: fixed;
-            display: none;
-            left: 0;
-            transform: translateY(-100%);
-            margin-top: 2em;
-            gap: 0;
-            flex-direction: column;
-            padding: 20px;
-            background-color: $theme-color-secondary;
-            width: 100%;
-            text-align: center;
-            transition: none;
-            z-index:1 ;
-
-            li {
-                margin: 10px 0;
-
-                /* Transition properties for submenu */
-                ul.sub-menu {
-                  transition: none;
-                  background-color: lighten($background-Color-Dark, 10%);
-                  max-height: 0;
-                  overflow: hidden;
-                  opacity: 0;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: #bababa;
-                    font-size: 24px;
-                    font-weight: 400;
-                    position: relative;
-                    transition: none;
-                    text-transform: uppercase;
-    
-                    &::before {
-                        display: none;
-                        transition: none;
-                    }
-                    
-                }
-            }
-        }
-    }
-    .menuItems.active{
-      transform: translateY(0); 
-      transition: none;
-
-    }
-   
-}
 
 
-//End Nav Styling
+// <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+//   <div class="container-nav">
+//     <a class="navbar-brand" href="<?= get_home_url() ?>"><?=get_bloginfo( "name" )?></a>
+//     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+//       <span class="navbar-toggler-icon"></span>
+//     </button>
+//     <div class="collapse navbar-collapse" id="navbarNav">
+//       <ul class="navbar-nav">
+//         <?php 
+
+//             wp_nav_menu(array( 'container_class' => 'main-nav', 'theme_location' => 'primary' ));
+
+//         ?>
+//       </ul>
+//     </div>
+//   </div>
+// </nav> -->
 
 .post_profile_img{
     width: 50px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.navbar-toggle{
+    color: #ffffff;
+    z-index: 5;
+}
+
+
+@media (max-width: 768px) {
+
+    .main-nav{
+        z-index: 5;
+    }
+
+    .main-nav .menu {
+        display: block;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .main-nav .menu-item {
+        display: block;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .main-nav .menu-item a {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px 0;
+        z-index: 5;
+    }
+
+    .main-nav .sub-menu {
+        display: none;
+        height: auto;
+        padding-left: 10px;
+        transition: none; /* Disable transitions for the sub-menu */
+        animation: none; /* Disable animations for the sub-menu */
+        z-index: 5;
+    }
+
+    .main-nav .menu-item-has-children > a::after {
+        content: "\25BC";
+        font-size: 0.8em;
+        padding-left: 5px;
+        z-index: 5;
+    }
+
+    .main-nav .menu-item-has-children {
+        position: relative;
+        z-index: 5;
+    }
+
+    .main-nav .menu-item-has-children.active .sub-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        z-index: 5;
+    }
+
+    .main-nav .menu-item-has-children .sub-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        z-index: 5;
+    }
+}
+.navbar-brand:hover{
+    color: #9359ff;
+}
+.main-nav .sub-menu {
+    display: none;
 }
 
 .post_profile_img {
@@ -299,6 +147,10 @@ nav {
     color: $main-blue;
 }
 
+nav{
+    background-color: $purple-800;
+}
+
 body{
     background: $background-Color-Dark !important;
 }
@@ -322,6 +174,76 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container a{
+    z-index: 5;
+    color: white;
+}
+
+.container button{
+    z-index: 5;
+}
+
+// Nav Menu Styling
+.main-nav{
+    position: relative;
+    z-index: 5;
+}
+
+.main-nav ul{
+    color: rgb(255, 255, 255);
+    list-style: none;
+}
+
+.main-nav li {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+.main-nav li a{
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main-nav li a:hover{
+    background-color: $purple-700;
+}
+
+.main-nav ul ul {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 2em;
+    left: 0;
+    z-index: 99999;
+    width: 180px;
+    height: auto;
+    background: $purple-800;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+}
+
+.main-nav ul li:hover > ul {
+    display: block;
+}
+
+.menu-item-has-children > a::after {
+    font-family:'FontAwesome';
+    content:"\f078";
+    padding-left: 5px;
+}
+
+
+.main-nav ul ul li {
+    display: block;
+    text-decoration: none;
+}
+
+.main-nav ul ul li a {
+    display: block;
 }
 
 /*--------------------------------------------------------------
@@ -386,11 +308,12 @@ body {
 --------------------------------------------------------------*/
 
 
-/* Main theming applied */
+/* This pen */
 body {
 	font-family: "Baloo 2", cursive;
 	font-size: 16px;
 	color: #ffffff;
+	text-rendering: optimizeLegibility;
 	font-weight: initial;
 }
 
@@ -557,7 +480,7 @@ a, a:hover {
 
     .postcard__img {
       max-width: 400px;
-      max-height: 400px;
+      max-height: 100%;
       transition: transform 0.3s ease;
     }
 

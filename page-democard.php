@@ -87,10 +87,10 @@ $background_img = wp_get_attachment_image_url(239, "full");
                                             <li class="tag__item"><i class="fas fa-newspaper mr-2"></i> Post</li>
                                             <li class="tag__item"><i class="fas fa-clock mr-2"></i> 5 mins</li>
                                             <li class="tag__item play blue">
-                                                <a href="<?=$catergory_url?>" style="text-decoration:none"><i class="fas fa-tag mr-2"></i> <?= $category_name?></a>
+                                                <a href="<?=$catergory_url?>"><i class="fas fa-tag mr-2"></i> <?= $category_name?></a>
                                             </li>
                                             <li class="tag__item play blue">
-                                                <a href="<?=the_permalink();?>" style="text-decoration:none"><i class="fas fa-play mr-2"></i> Read More</a>
+                                                <a href="<?=the_permalink();?>"><i class="fas fa-play mr-2"></i> Read More</a>
                                             </li>
                                         </ul>
                                     </div>

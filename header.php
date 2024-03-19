@@ -16,21 +16,20 @@
 </head>
  
 <body <?php body_class(); ?>>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-  <div class="container">
-    <a class="navbar-brand" href="<?= get_home_url() ?>"><?=get_bloginfo( "name" )?></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <?php 
+<section>
+  <nav>
+      <a class="phantom"></a>
+      <a class="nav-brand"href="<?= get_home_url() ?>"><?=get_bloginfo( "name" )?></a>
+      <?php 
+        wp_nav_menu_no_ul()
+      ?>
 
-            wp_nav_menu(array( 'container_class' => 'main-nav', 'theme_location' => 'primary' ));
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+  </nav>
 
-        ?>
-      </ul>
-    </div>
-  </div>
-</nav>
+</section>
 

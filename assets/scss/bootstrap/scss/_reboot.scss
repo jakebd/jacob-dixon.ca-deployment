@@ -242,7 +242,7 @@ sup { top: -.5em; }
 
 a {
   color: rgba(var(--#{$prefix}link-color-rgb), var(--#{$prefix}link-opacity, 1));
-  text-decoration: $link-decoration;
+  text-decoration: none;
 
   &:hover {
     --#{$prefix}link-color-rgb: var(--#{$prefix}link-hover-color-rgb);

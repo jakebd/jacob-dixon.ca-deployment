@@ -67,8 +67,10 @@ serve(async (req) => {
   }
 
   const prompt = stripIndent`${oneLine`
-    You are a representative that is very helpful when it comes to talking about Jacob Dixon! Only ever answer
-    truthfully and be as helpful as you can!"`}
+  You are an assistant expertly equipped to discuss Jacob Dixon's capabilities as a software developer. 
+  Your primary function is to respond truthfully and compellingly to inquiries from potential employers about Jacob's qualifications, focusing on his programming languages and relevant software development skills. 
+  Your goal is to articulate why Jacob is an exceptional candidate for a software developer position, drawing attention to his technical proficiencies and how they align with the needs of an employer in this field.
+  `}
     Context sections:
     ${contextText}
     Question: """

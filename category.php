@@ -10,33 +10,41 @@ get_header();
     }
 
     ?>
-    <div class="mb-5">
-        <div class="display-6 text-black fw-normal"> <?= $category_name?></div>
-    </div>
+    <section class="dark">
+	<div class="container py-4">
+		<h1 class="h1 text-center" id="pageHeaderTitle"><?= $category_name?></h1>
     <?php
     
 if ( have_posts() ) :
     while ( have_posts() ) : the_post();
         ?>
-        <div class="mb-5">
-            <div class="card" style="">
-                <div class="row no-gutters">
-                    <div class="col-sm-5">
-                        <img class="card-img" src="<?=get_the_post_thumbnail_url($post,'large')?>">
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="card-body">
-                            <h5 class="card-title"><?=the_title();?></h5>
-                            <p class="card-text"><?=the_excerpt();?></p>
-                            <a href="<?=the_permalink();?>" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </div>
+        <article class="postcard dark blue">
+            <a class="postcard__img_link" href="<?=the_permalink();?>">
+                <img class="postcard__img" src="<?=get_the_post_thumbnail_url($post,'large')?>" alt="Image Title" />
+            </a>
+            <div class="postcard__text">
+                <h1 class="postcard__title blue"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
+
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt"><?=the_excerpt()?></div>
+                <ul class="postcard__tagbox">
+                    <li class="tag__item"><i class="fas fa-newspaper mr-2"></i> Post</li>
+                    <li class="tag__item"><i class="fas fa-clock mr-2"></i> 5 mins</li>
+                    <li class="tag__item play blue">
+                        <a href="<?=$catergory_url?>"><i class="fas fa-tag mr-2"></i> <?= $category_name?></a>
+                    </li>
+                    <li class="tag__item play blue">
+                        <a href="<?=the_permalink();?>"><i class="fas fa-play mr-2"></i> Read More</a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </article>
         <?php
     endwhile;
 endif;
-
+?>
+</section> 
+</div>
+<?php
 get_footer();
 ?>

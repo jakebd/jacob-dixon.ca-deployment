@@ -1,0 +1,243 @@
+body{
+  margin-top: 10vh;
+}
+
+.container-page {
+  margin: 12vw;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center; /* Adjust as needed */
+}
+
+.direct-contact-container {
+  margin-top: 20vh;
+}
+
+.container-page .container_form,
+.container-page .direct-contact-container {
+    flex-basis: 100%; /* Adjust the width as needed */
+}
+
+div.wpforms-container-full input[type=text]{
+  background: #dddddd !important;
+}
+
+.wpforms-container input.wpforms-field-medium{
+  max-width: 90% !important;
+  margin: 0 auto !important;
+  background: #dddddd !important;
+}
+
+div.wpforms-container-full textarea {
+  width: 90% !important;
+  margin: 0 auto !important;
+  background: #dddddd !important;
+}
+
+.wpforms-container .wpforms-field-container {
+  clear: both !important;
+  position: relative !important;
+}
+
+.container_form {
+  max-width: 40%;
+  margin: 0 auto;
+  background-color: #252525; /* Dark background color */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
+}
+
+/* Centering the wpforms-field-container and making fields take up all available space */
+.wpforms-container {
+  display: flex !important;
+  flex-direction: column !important; /* Stack fields vertically */
+  align-items: center !important; /* Center items horizontally */
+}
+.wpforms-form{
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important; /* Stack fields vertically */
+  align-items: center !important; /* Center items horizontally */
+}
+/* Make fields take up all available space */
+.wpforms-container .wpforms-field {
+  flex: 1 !important; /* Grow to fill available space */
+  width: 100% !important; /* Ensure full width */
+  max-width: 100% !important; /* Limit maximum width if needed */
+}
+
+.wpforms-field-container{
+  width: 100% !important;
+}
+
+.wpforms-field-row{
+  width: 100% !important;
+}
+
+.wpforms-field-label{
+  width: 90% !important;
+  color: white !important;
+
+}
+div.wpforms-container-full .wpforms-field-label {
+  margin: 0 auto !important;
+}
+
+.wpforms-field-sublabel{
+  color: #ccc !important;
+}
+
+div.wpforms-container-full button[type=submit]{
+  padding: 0 7vw !important;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+
+@media (min-width: 768px) and (max-width: 1000px) {
+	.container-page {
+    margin: 5vw;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+  }
+  
+  }
+
+@media (max-width: 767px) {
+  .container-page {
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretch items to fill container width */
+  }
+
+  .direct-contact-container {
+    margin: 0 auto;
+    order: 1; /* Move this section to the top */
+  }
+
+  .container_form {
+    max-width: 100%;
+    margin: 1vw;
+    order: 2; /* Move this section to the bottom */
+  }
+}

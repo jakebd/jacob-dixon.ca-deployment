@@ -25,7 +25,7 @@ while ( have_posts() ) :
                             <!-- Post title-->
                             <h1 class="fw-bolder mb-1"><?= the_title()?></h1>
                             <!-- Post meta content-->
-                            <div class="text-muted fst-italic mb-4">
+                            <div class="fst-italic mb-4">
                             <img src="<?= $avatar_src ?>" class="post_profile_img"> 
                                 <?= $author_name ?>
                             </div>  

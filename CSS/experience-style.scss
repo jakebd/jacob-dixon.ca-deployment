@@ -6,15 +6,18 @@
  * Twitter: @3rdwave_themes
  * Website: https://themes.3rdwavemedia.com/
 */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/variables";
 
 // Define theme colour scheme
-$theme-color-primary: #22A162;
-$theme-text-color-primary: #434E5E;
+//tint-color($#6f42c1, 20%)
+$theme-color-primary: #14111c;
+$theme-text-color-primary: #1f1623;
 $theme-text-color-secondary: lighten($theme-text-color-primary, 10%);
-$theme-text-color-light: lighten($theme-text-color-primary, 40%);
+$theme-text-color-light: lighten($theme-text-color-primary, 30%);
 $theme-border-color:  lighten($theme-text-color-primary, 10%);
 $theme-divider-color: lighten($theme-text-color-primary, 10%);
-$theme-bg-light: #F7F8FA;
+$theme-bg-light: #e3e3e3;
 $theme-bg-dark: $theme-text-color-primary;
 
 // Create variables to override the default value for variables used in the Bootstrap SCSS files.
@@ -24,29 +27,37 @@ $theme-colors: (
 );
 
 //Import Bootstrap
-@import "bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+//messing with my nav bar hover, and the font of the whole page.
 
 /*************************** Pillar Styles ****************************/
 body {
-    font-family: 'Roboto', sans-serif;  
+    font-family: "Baloo 2", cursive !important; 
     background: $theme-bg-light;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: $theme-text-color-primary;
     overflow-x: hidden;
-    
+    margin-top: 10vh;
 }
 
 a {
-	color: $theme-color-primary;
-	
+	color: #fff !important;
+	//color: $theme-color-primary;
 	&:hover {
 		color: darken($theme-color-primary, 15%);
 	}
 	
 	&.no-text-decoration {
 		text-decoration: none;
+	}
+}
+
+a.text-link {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
 	}
 }
 
@@ -70,12 +81,16 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 }
 
 .progress {
+	background-color: #f7f7f7 !important;
 	@include border-radius(2px);
 }
 
 .theme-progress-bar-dark {
 	background-color: $theme-color-primary;
 	
+}
+.resume-body{
+	background-color: #dddddd;
 }
 
 .resume-wrapper {
@@ -89,7 +104,7 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 }
 
 .resume-header {
-	background: $theme-color-primary;
+	background: lighten($theme-color-primary, 6%);
 	color: rgba(256, 256, 256, 0.9);
 	height: 220px;
 	.picture {
@@ -217,9 +232,8 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 
 .badge-light {
 	color: $theme-text-color-secondary;
-	background: $theme-bg-light;
+	background: #c4bed0;
 }
-
 
 .resume-degree {
 	color: $theme-text-color-primary;
@@ -230,10 +244,6 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 .resume-degree-time {
 	color: $theme-text-color-light;
 	font-size: 0.875rem;
-}
-
-.resume-awards-list {
-
 }
 
 .resume-award-icon {
@@ -262,7 +272,26 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 	}
 }
 
-// Small devices (landscape phones, less than 768px)
+.experience-container{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+@media (min-width: 768px) and (max-width: 949px) {
+	.resume-social .text-link {
+	  font-size: 0; /* Set font size to 0 to hide text content */
+	}
+	.resume-social .text-link > span {
+	  font-size: 16px; /* Reset font size for the icon */
+	}
+  }
+  @media (min-width: 768px) and (max-width: 790px) {
+	.resume-social .text-link {
+		display: none;
+	  }
+  }
+
+// Small devices (landscape phones, less than 767.98px)
 @media (max-width: 767.98px) {
     .resume-wrapper {
 	    padding-top: 0;
@@ -276,6 +305,9 @@ a.theme-btn-on-bg, .theme-btn-on-bg {
 		@include border-radius(4px);
 	}
 
+	.experience-container{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	
 }
-
