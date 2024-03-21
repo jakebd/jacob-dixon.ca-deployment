@@ -15,14 +15,20 @@ get_header();
 
         <hr>
         <ul class="social-media-list">
-            <li><a href="https://linkedin.com/in/jacob-dixon-53194b171" target="_blank" class="contact-icon">
-            <i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <li>
+                <a href="https://linkedin.com/in/jacob-dixon-53194b171" target="_blank" class="contact-icon">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                </a>
             </li>
-            <li><a href="https://github.com/jakebd" target="_blank" class="contact-icon">
-            <i class="fab fa-github" aria-hidden="true"></i></a>
+            <li>
+                <a href="https://github.com/jakebd" target="_blank" class="contact-icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </li>
-            <li><a href="https://www.instagram.com/jake_d07/" target="_blank" class="contact-icon">
-            <i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <li>
+                <a href="https://www.instagram.com/jake_d07/" target="_blank" class="contact-icon">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
             </li>       
         </ul>
         <hr>
