@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<div class="experience-container mt-3 mb-5">
+<div class="experience-container mt-4 mb-5 pt-3">
     <article class="resume-wrapper text-center position-relative">
 	    <div class="resume-wrapper-inner mx-auto text-start bg-white shadow-lg">
 		    <header class="resume-header pt-4 pt-md-0">
@@ -128,20 +128,20 @@ get_header();
 								        <li class="mb-2">
 								          <div class="resume-skill-name">React</div>
 									          <div class="progress resume-progress">
-											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 											    </div>
 								        </li>
 								        <li class="mb-2">
 								          <div class="resume-skill-name">JavaScript</div>
 									          <div class="progress resume-progress">
-											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 											    </div>
 								        </li>
 								        
 								        <li class="mb-2">
 								          <div class="resume-skill-name">Node.js</div>
 									          <div class="progress resume-progress">
-											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 											    </div>
 								        </li>
 								        <li class="mb-2">
@@ -159,25 +159,25 @@ get_header();
 								        <li class="mb-2">
 								          <div class="resume-skill-name">PHP</div>
 									          <div class="progress resume-progress">
-											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 											    </div>
 								        </li>
                         <li class="mb-2">
 								          <div class="resume-skill-name">ASP.NET</div>
 									          <div class="progress resume-progress">
-											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 											    </div>
 								        </li>
 								        <li class="mb-2">
 								          <div class="resume-skill-name">WordPress</div>
 									          <div class="progress resume-progress">
-											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 											    </div>
 								        </li>
                         <li class="mb-2">
 								          <div class="resume-skill-name">SQL</div>
 									          <div class="progress resume-progress">
-											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+											      <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
 											    </div>
 								        </li>
 							        </ul>
@@ -229,12 +229,12 @@ get_header();
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled">
-								    <li class="mb-1">Gaming</li>
+									<li class="mb-1">Photography</li>
+									<li class="mb-1">Cooking</li>
+									<li class="mb-1">Baking</li>
+								    <li class="mb-1">Hiking</li>
 								    <li class="mb-1">Skiing</li>
-								    <li class="mb-1">Cooking</li>
-                    <li class="mb-1">Baking</li>
-                    <li class="mb-1">Photography</li>
-                    <li class="mb-1">Hiking</li>
+									<li class="mb-1">Gaming</li>
 							    </ul>
 						    </div>
 					    </section><!--//interests-section-->

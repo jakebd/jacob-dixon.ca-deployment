@@ -40,7 +40,7 @@ $background_img = wp_get_attachment_image_url(239, "full");
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="width: 100%; height: 100vh; background: url(<?=$background_img?>) top center; background-size: cover;">
     <div class="hero-container">
         <h1>Jacob Dixon</h1>
-        <p>Explore my portfolio by scrolling down to view my latest projects.</p>
+        <p>Please explore my latest projects as an upcoming Web Developer</p>
     </div>
 </section><!--End Hero -->
 <section class="dark">

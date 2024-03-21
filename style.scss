@@ -160,7 +160,9 @@ nav {
         
         .nav-brand{
             display: inline-flex;
-            font-size: 2rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.25rem;
             color: #bababa;
             text-align: center;
             z-index: 99999;
@@ -369,9 +371,15 @@ body {
   }
   
   @media (max-width: 768px) {
+    
     #hero h1 {
+      margin: 10px;
       font-size: 28px;
       line-height: 36px;
+    }
+
+    #hero p{
+      margin: 10px;
     }
   
     #hero h2 {
@@ -457,7 +465,7 @@ a, a:hover {
   }
 
   .postcard__img {
-    max-height: 180px;
+    max-height: 300px;
     width: 100%;
     object-fit: cover;
     position: relative;
@@ -556,8 +564,8 @@ a, a:hover {
     }
 
     .postcard__img {
-      max-width: 400px;
-      max-height: 400px;
+      max-width: 300px;
+      max-height: 100%;
       transition: transform 0.3s ease;
     }
 
@@ -612,6 +620,12 @@ a, a:hover {
       top: -20%;
       height: 130%;
       width: 55px;
+    }
+
+    .postcard__img {
+      max-width: 400px !important;
+      max-height: 100%;
+      transition: transform 0.3s ease;
     }
 	
   .postcard.dark {

@@ -2,7 +2,7 @@
 <?php
 get_header();
 ?>
-<div class="container mt-3 mb-5 ps-5 pe-5">
+<div class="container mt-3 mb-5 ps-2 pe-2">
 
 <?php
     foreach((get_the_category()) as $category) {

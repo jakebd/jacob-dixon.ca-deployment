@@ -5,7 +5,7 @@ get_header();
 
     <div class="direct-contact-container">
         <ul class="contact-list">
-            <li class="list-item"><i class="fa fa-map-marker fa-2x"></i><span class="contact-text place">Halifax, Nova Scotia</span></li>
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"></i><span class="contact-text place"><a href="https://maps.app.goo.gl/6y77qXwq7GFCcrbQ6" target="_blank" title="Halifax, Nova Scotia">Halifax, Nova Scotia</a></span></li>
             
             <li class="list-item"><i class="fa fa-phone fa-2x"></i><span class="contact-text phone"><a href="tel:1-902-222-9322" title="Give me a call">(902) 222-9322</a></span></li>
             
