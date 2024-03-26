@@ -39,7 +39,7 @@ get_header();
 					    <p class="mb-0">
 
                   I'm Jacob Dixon, on the cusp of earning a Diploma in IT Web Programming from the Nova Scotia Community College this year. 
-                  My academic journey has endowed me with a strong foundation in web development, offering me a comprehensive understanding of various technologies, languages and logic. 
+                  My academic journey has built a strong foundation in web development, offering me a comprehensive understanding of various technologies, languages and logic. 
                   This experience is bolstered by my tenure at American Eagle Outfitters as store manager. This is where I honed in my leadership, coaching, and teamwork abilities to drive a team to deliver top results.
                   As I gear up to transition into the tech industry, I am excited to deepen my technical understanding and continue developing my skills, with a goal to one day become and expert in the field.
 
@@ -64,21 +64,20 @@ get_header();
 									    <div class="resume-timeline-item-desc">
 										    <p>
 
-                          In my role as a Store Manager at American Eagle Outfitters(2020 - 2022), tasked with leading a top-200 store, I leveraged my leadership and team management skills to drive significant sales and profit growth. 
+                          In my role as a Store Manager at American Eagle Outfitters(2020 - 2022), tasked with leading a top-200 store, I leveraged my leadership and team management skills to drive consistant sales and profit growth. 
                           My approach focused on developing a team-oriented environment, where coaching and personal development were prioritized, leading to enhanced performance and customer satisfaction. 
                           I was responsible for managing store operations, inventory, visual merchandising, and ensuring adherence to company policies. 
-                          My efforts were aimed at creating a high-achieving store culture that consistently met and exceeded company goals.
+                          My efforts were aimed at creating a high-achieving store culture that consistently met or exceeded company goals.
 
                         </p>
-										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-										    <p>Below are some of the achievements I'm most proud of working at American Eagle</p>
+										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Notable Achievements:</h4>
 										    <ul>
-											    <li>Implemented a strategy to diversify hiring practices, promoting an inclusive workplace and community engagement</li>
+											    <li>Implemented a strategy to diversify hiring practices, emphasizing an inclusive workplace and building community engagement</li>
 											    <li>Developed an indepth understanding and appreciation for inclusion and diversity, leading to a cultural shift within the store.</li>
-											    <li>Mastered adapting to change and innovation, crucial in fast-paced environments.</li>
-											    <li>Addressed various ethical scenarios in retail, paralleling ethical challenges in IT, fostering teamwork and equitable treatment.</li>
-                          <li>Rapid career advancement to Store Manager, showcasing leadership and operational excellence.</li>
-                          <li>Achieved high staff satisfaction and customer service excellence, reflected in positive staff surveys and high district ratings.</li>
+											    <li>Mastered the art of adapting to change with a focus on innovation, crucial in fast-paced environments.</li>
+											    <li>Fostered an environment where teamwork and equitable treatment were the priority.</li>
+                          						<li>Rapid career advancement to Store Manager, showcasing leadership and operational excellence.</li>
+                          						<li>Achieved high staff satisfaction and customer service excellence, reflected in positive staff surveys and high staff retention.</li>
 										    </ul>
 									    </div><!--//resume-timeline-item-desc-->
 
@@ -91,24 +90,22 @@ get_header();
 										        <h3 class="resume-position-title font-weight-bold mb-1">Customer Experience Associate</h3>
 										        <div class="resume-company-name ms-auto">TD Canada Trust</div>
 										    </div><!--//row-->
-										    <div class="resume-position-time">Sept 2022 - Present</div>
+										    <div class="resume-position-time">Oct 2022 - Present</div>
 									    </div><!--//resume-timeline-item-header-->
 									    <div class="resume-timeline-item-desc">
 										    <p>
 
-                        In my role as a Customer Experience Associate at TD Canada Trust, I bring a personal touch to banking, particularly for those who benefit the most from personalized guidance through the new era of digital banking.  
-                        My patience and ability to explain complex banking tools in simple terms are what I consider my superpowers. 
-                        This position has not only allowed me to develop strong interpersonal skills but has also deepened my understanding of the financial system. 
-                        As a result, I've grown more confident in managing finances, both personally and for those I assist, making banking a more accessible and less daunting experience for everyone.
-
-                        </p>
+											In my role as a Customer Experience Associate (CEA) at TD Canada Trust, I try to bring a personal touch to banking, particularly for those who need guidance through the new era of digital banking.  
+											My patience and ability to explain complex banking tools in simple terms are what I consider my superpowers. 
+											This position has not only allowed me to continue developing strong interpersonal skills but has also deepened my understanding of the financial system. 
+											</p>
 										    <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements</h4>
 										    <ul>
 											    <li>Demonstrated compliance excellence with bank operations and internal policies, ensuring all transactions meet regulatory standards.</li>
 											    <li>Excelled in cash handling processes, maintaining accuracy and security in all financial transactions.</li>
 											    <li>Received glowing customer reviews, highlighting exceptional service and personalized banking guidance.</li>
 											    <li>Developed and applied financial knowledge, effectively advising customers on their banking needs and options.</li>
-                          <li>Achieved in-line score card metrics, demonstrating effectiveness in promoting new credit products to customers.</li>
+                          						<li>Achieved in-line score card metrics, demonstrating effectiveness in promoting new credit products to customers.</li>
 										    </ul>
 									    </div><!--//resume-timeline-item-desc-->
 								    </article><!--//resume-timeline-item-->
@@ -234,7 +231,6 @@ get_header();
 									<li class="mb-1">Baking</li>
 								    <li class="mb-1">Hiking</li>
 								    <li class="mb-1">Skiing</li>
-									<li class="mb-1">Gaming</li>
 							    </ul>
 						    </div>
 					    </section><!--//interests-section-->

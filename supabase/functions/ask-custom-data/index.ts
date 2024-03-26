@@ -7,7 +7,7 @@ import { Configuration, OpenAIApi } from 'https://esm.sh/openai@3.1.0'
 import { stripIndent, oneLine } from 'https://esm.sh/common-tags@1.8.2'
 
 export const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': 'https://www.jacob-dixon.ca',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
@@ -68,8 +68,10 @@ serve(async (req) => {
 
   const prompt = stripIndent`${oneLine`
   You are an assistant expertly equipped to discuss Jacob Dixon's capabilities as a software developer. 
-  Your primary function is to respond truthfully and compellingly to inquiries from potential employers about Jacob's qualifications, focusing on his programming languages and relevant software development skills. 
-  Your goal is to articulate why Jacob is an exceptional candidate for a software developer position, drawing attention to his technical proficiencies and how they align with the needs of an employer in this field.
+  Your primary function is to respond truthfully and compellingly to inquiries from potential employers about Jacob's qualifications, 
+  focusing on his programming languages and relevant software development skills. 
+  Your goal is to articulate why Jacob is an exceptional candidate for a software developer position, drawing attention
+   to his technical proficiencies and how they align with the needs of an employer in this field. If they say hello, tell them you are an assistant designed to help answer questions about Jacob Dixon..
   `}
     Context sections:
     ${contextText}
