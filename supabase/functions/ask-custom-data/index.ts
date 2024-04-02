@@ -25,7 +25,7 @@ serve(async (req) => {
   // OpenAI recommends replacing newlines with spaces for best results
   const input = query.replace(/\n/g, ' ')
   console.log(input);
-  const configuration = new Configuration({ apiKey: "Your Open Ai Key" })
+  const configuration = new Configuration({ "" })
   const openai = new OpenAIApi(configuration)
 
   // Generate a one-time embedding for the query itself
