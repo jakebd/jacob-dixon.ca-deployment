@@ -98,7 +98,7 @@ function photos_enqueue_styles(){
         wp_localize_script("supabase", "WPVars", array(
             "SupaURL" => "https://trgudyxbbcssozaokpef.supabase.co",
             "SupaKey" => "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRyZ3VkeXhiYmNzc296YW9rcGVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAyNjk2NTQsImV4cCI6MjAyNTg0NTY1NH0.xdcZ62kIXdBePM7v9She65EKxwfLvKXKsR6rRFj65Q4",
-            "OpenAiKey" => "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"
+            "OpenAiKey" => "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"
           )
         );
     }

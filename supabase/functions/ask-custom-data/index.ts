@@ -25,7 +25,7 @@ serve(async (req) => {
   // OpenAI recommends replacing newlines with spaces for best results
   const input = query.replace(/\n/g, ' ')
   console.log(input);
-  const configuration = new Configuration({ apiKey: "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" })
+  const configuration = new Configuration({ apiKey: "Your Open Ai Key" })
   const openai = new OpenAIApi(configuration)
 
   // Generate a one-time embedding for the query itself
@@ -40,8 +40,8 @@ serve(async (req) => {
   // rpc: call PostgreSQL functions in supabase
   const { data: documents, error } = await supabaseClient.rpc('match_documents', {
     query_embedding: embedding,
-    match_threshold: .73, // Choose an appropriate threshold for your data
-    match_count: 10, // Choose the number of matches
+    match_threshold: .73, //threshold for the data
+    match_count: 10, //the number of matches
   })
   
   if (error) throw error
@@ -58,7 +58,7 @@ serve(async (req) => {
     const encoded = tokenizer.encode(content)
     tokenCount += encoded.text.length
 
-    // Limit context to max 1500 tokens (configurable)
+    // Limit context to max 1500 tokens 
     if (tokenCount > 1500) {
       break
     }
@@ -71,7 +71,9 @@ serve(async (req) => {
   Your primary function is to respond truthfully and compellingly to inquiries from potential employers about Jacob's qualifications, 
   focusing on his programming languages and relevant software development skills. 
   Your goal is to articulate why Jacob is an exceptional candidate for a software developer position, drawing attention
-   to his technical proficiencies and how they align with the needs of an employer in this field. If they say hello, tell them you are an assistant designed to help answer questions about Jacob Dixon..
+   to his technical proficiencies and how they align with the needs of an employer in this field. If they say hello, tell them you are an assistant designed to help answer questions about Jacob Dixon.
+   when asked about programming languages make sure you specify that html is mark up language, don't unclude it is the programming languages list.
+   Don't mention his siblings when asked describe jacob.
   `}
     Context sections:
     ${contextText}
@@ -85,7 +87,7 @@ serve(async (req) => {
   const completionResponse = await openai.createCompletion({
     model: 'gpt-3.5-turbo-instruct',
     prompt,
-    max_tokens: 512, // Choose the max allowed tokens in completion
+    max_tokens: 512, // max allowed tokens in completion
     temperature: 0, // Set to 0 for deterministic results
   })
 
