@@ -82,7 +82,7 @@ async function generateEmbeddings(){
 
 //only run this when you need to make the data again, as it will insert into the database duplicate data
 generateEmbeddings();
-
+ 
 //installed npm install supabase --save-dev
 //building an edge function, which is essentially just an api endpoint.
 

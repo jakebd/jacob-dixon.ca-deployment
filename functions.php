@@ -180,7 +180,7 @@ class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
         $title = apply_filters('the_title', $item->title, $item->ID);
 
-        // Check if this item has children
+        // Check if this item has children 
         $has_children = in_array('menu-item-has-children', $item->classes);
 
         if ($depth === 0) {

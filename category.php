@@ -26,7 +26,7 @@ if ( have_posts() ) :
                 <h1 class="postcard__title blue"><a href="<?=the_permalink();?>"><?=the_title();?></a></h1>
 
                 <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt"><?=the_excerpt()?></div>
+                <div class="postcard__preview-txt"><?=the_excerpt()?></div> 
                 <ul class="postcard__tagbox">
                     <li class="tag__item"><i class="fas fa-newspaper mr-2"></i> Post</li>
                     <li class="tag__item"><i class="fas fa-clock mr-2"></i> 5 mins</li>
